@@ -7,11 +7,11 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     String[] interns = {
-            "Kate Owens",
-            "George Royce",
-            "TJ Chhabra",
+            "John Smith",
+            "Jane Doe",
+            "Winnie The Pooh",
             "Yuri Ramocan",
-            "Tijana Milovanovic"
+            "John Cena"
     };
 
     public void openListActivity(View view) {

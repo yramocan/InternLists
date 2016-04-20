@@ -18,7 +18,7 @@ public class ListActivity extends AppCompatActivity {
         // Find ListView to attach array data
         ListView internListView = (ListView) findViewById(R.id.internList);
 
-        // Create array adapter internsAdapter to map array data to list
+        // Create array adapter internsAdapter to map array data to list view
         ArrayAdapter<String> internsAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
