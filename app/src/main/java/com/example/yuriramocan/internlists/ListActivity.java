@@ -1,37 +1,31 @@
 package com.example.yuriramocan.internlists;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class ListActivity extends AppCompatActivity {
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        ArrayList<String> interns = getIntent().getStringArrayListExtra("interns");
+        // Get data passed from MainActivity
+        String[] interns = getIntent().getStringArrayExtra("interns");
 
-        Log.d("this is my array", "arr: " + Arrays.toString(interns));
-
+        // Find ListView to attach array data
         ListView internListView = (ListView) findViewById(R.id.internList);
 
-        ArrayAdapter<String> internsAdapter = new ArrayAdapter<String>(
+        // Create array adapter internsAdapter to map array data to list
+        ArrayAdapter<String> internsAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
                 interns
                 );
 
+        // Set array adapter to appropriate list view
         internListView.setAdapter(internsAdapter);
     }
 }

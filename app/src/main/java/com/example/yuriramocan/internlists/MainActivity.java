@@ -18,9 +18,6 @@ public class MainActivity extends AppCompatActivity {
         // Initialize list activity.
         Intent intentListActivity = new Intent(MainActivity.this, ListActivity.class);
 
-//        Bundle b = new Bundle();
-//        b.putStringArray();
-
         intentListActivity.putExtra("interns", interns);
 
         // Start new activity.
